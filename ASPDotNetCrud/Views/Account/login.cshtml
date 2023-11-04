@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "login";
+}
+
+<div class="text-center">
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6"> 
+
+                @if (!string.IsNullOrEmpty(ViewData["loginPopup"] as string))
+                {
+                    <div class="alert alert-danger mt-3">@ViewData["loginPopup"]</div>
+                }
+
+                <form asp-controller="Login" asp-action="CheckInput" method="post">
+                    <h1 class="display-3 mb-4">login</h1>
+
+                    <h1 class="display-6">name</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" name="_name" class="form-control" placeholder="name" aria-label="name" aria-describedby="basic-addon1">
+                    </div>
+                    <br/>
+                    <h1 class="display-6">password</h1>
+                    <div class="input-group mb-3">
+                        <input type="password" name="_password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="t-y-center">
+                            no acount? register
+                        </div>
+                        <a class="nav-link t-color-orange t-hover-color-white" asp-area="" asp-controller="register" asp-action="register">here</a>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn bg-orange t-color-white px-4">login</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

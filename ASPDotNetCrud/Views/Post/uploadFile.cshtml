@@ -1,0 +1,16 @@
+﻿@using ASPDotNetCrud.Utility; 
+
+@{
+    ViewData["Title"] = "upload file";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>upload a file plz</p>
+
+<form asp-action="Upload" asp-controller="uploadFile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="imageFile">Select an image:</label>
+        <input type="file" name="imageFile" id="imageFile" accept=".jpg, .jpeg, .png">
+    </div>
+    <button type="submit" class="btn btn-primary">Upload Image</button>
+</form>

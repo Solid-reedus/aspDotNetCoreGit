@@ -1,0 +1,91 @@
+/*
+    #17191c - black
+    #1a1d21 - grey
+    #F96D00 - orange
+    #F2F2F2 - white
+*/
+
+
+html 
+{
+    font-size: 14px;
+}
+
+body 
+{
+    background-color: #17191c;
+    color: #F2F2F2;
+}
+
+.t-color-orange 
+{
+    color: #F96D00
+}
+
+.t-hover-color-orange:hover
+{
+    color: #F96D00
+}
+
+.bg-orange 
+{
+    background: #F96D00;
+}
+
+.t-hover-color-white:hover 
+{
+    color: #F2F2F2
+}
+
+.t-color-white 
+{
+    color: #F2F2F2
+}
+
+
+header, footer {
+    background-color: #1a1d21;
+    color: #F96D00;
+}
+
+.t-y-center
+{
+    margin: auto 0;
+}
+
+.header-img {
+    height: 5%;
+    width: 5%;
+    min-height: 75px;
+    min-width: 75px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+#searchResults
+{
+    display:grid;
+}
+
+.user-img
+{
+    width: 50%;
+    max-height: 300px;
+    max-width: 300px;
+
+}
+
+@media (min-width: 768px) {
+    html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

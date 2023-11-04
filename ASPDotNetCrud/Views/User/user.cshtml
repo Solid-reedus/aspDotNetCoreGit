@@ -1,0 +1,27 @@
+﻿@using ASPDotNetCrud.Utility;
+@using static ASPDotNetCrud.Utility.SessionUtility;
+@{
+    User user = SessionUtility.GetUserFromSession(SessionKeys.userSession, Context);
+    SessionUtility.Set(SessionKeys.userName, user.name, Context);
+    if (user.profilePicture != null)
+    {
+        SessionUtility.Set(SessionKeys.userPic, user.profilePicture, Context);
+    }
+
+    ViewData["Title"] = "user";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">welcome @user?.name</h1>
+    <div class="row">
+        <div class="col justify-content-lg-start">
+            <img class="user-img" src="~/uploadImages/@user?.profilePicture">
+       </div>
+       <div class="col">
+           <h1 class="display-6">posts</h1>
+       </div>
+    </div>
+    
+
+</div>

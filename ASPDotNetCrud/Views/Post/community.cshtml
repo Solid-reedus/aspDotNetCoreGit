@@ -1,0 +1,91 @@
+﻿@using ASPDotNetCrud.Utility; 
+@{
+
+    uint? communityId = (uint?)ViewData["communityId"];
+    List<Community>? communities = (List<Community>?)ViewData["communities"];
+
+
+    ViewData["Title"] = "community";
+
+    if (communityId != null)
+    {
+
+        if (communityId != null && communityId >= 1 && communityId <= communities.Count)
+        {
+            // Subtract 1 from the communityId to use it as an index
+            uint index = communityId.Value - 1;
+            ViewData["communityTitle"] = "welcome to " + communities[(int)index].name;
+        }
+    }
+    else
+    {
+        ViewData["communityTitle"] = "please selected a community to browse";
+    }
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["communityTitle"]</h1>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" id="searchInput" placeholder="Search communities...">
+            <div id="searchResults"></div>
+
+
+            <script>
+                // Function to filter and update results
+                // Function to filter and update results
+                function filterResults() {
+                    const input = document.getElementById("searchInput").value.toLowerCase();
+                    const resultsDiv = document.getElementById("searchResults");
+
+                    // Clear previous results
+                    resultsDiv.innerHTML = "";
+
+                    if (!(input === "")) 
+                    {
+                        // Send an AJAX request to the controller to get the list of communities
+                        var communities = @Html.Raw(Json.Serialize(ViewData["communities"]));
+
+                        const filteredCommunities = communities.filter(community =>
+                            community['name'].toLowerCase().includes(input)
+                        );
+
+
+                        filteredCommunities.forEach(result => {
+                            const resultLink = document.createElement("a");
+                            resultLink.textContent = result['name'];
+                            resultLink.href = `?id=${result['id']}`; // Replace with your URL format
+                            resultLink.classList.add("community-link"); // Add a CSS class for styling
+                            resultsDiv.appendChild(resultLink);
+                        });
+
+                        console.log(filteredCommunities);
+                    } else {
+                        console.log("input is empty");
+                    }
+                }
+
+
+                // Event listener for input changes
+                document.getElementById("searchInput").addEventListener("input", filterResults);
+
+
+            </script>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        @*here append a post foreach post belongin to a community*@
+
+
+
+    </div>
+
+
+</div>
+
+
