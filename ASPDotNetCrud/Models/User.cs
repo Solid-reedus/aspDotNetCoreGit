@@ -73,6 +73,11 @@ namespace ASPDotNetCrud.Models
             profilePicture = _profilePicture;
         }
 
+        public void SetProfilePic(string scr)
+        {
+            profilePicture = scr;
+        }
+
         public string name { get; private set; }
         public string? profilePicture { get; private set; }
         uint id { get; set; }

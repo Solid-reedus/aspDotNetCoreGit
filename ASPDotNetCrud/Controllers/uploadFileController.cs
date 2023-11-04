@@ -25,8 +25,6 @@ namespace ASPDotNetCrud.Controllers
         [HttpPost]
         public IActionResult Upload(IFormFile imageFile)
         {
-
-
             if (imageFile != null && imageFile.Length > 0)
             {
                 var uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
@@ -36,6 +34,9 @@ namespace ASPDotNetCrud.Controllers
                 {
                     imageFile.CopyTo(stream);
                 }
+
+
+
             }
 
             return View("~/Views/Home/uploadFile.cshtml");

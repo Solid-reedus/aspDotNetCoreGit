@@ -1,13 +1,7 @@
 ﻿@using ASPDotNetCrud.Utility;
 @using static ASPDotNetCrud.Utility.SessionUtility;
 @{
-    User user = SessionUtility.GetUserFromSession(SessionKeys.userSession, Context);
-    SessionUtility.Set(SessionKeys.userName, user.name, Context);
-    if (user.profilePicture != null)
-    {
-        SessionUtility.Set(SessionKeys.userPic, user.profilePicture, Context);
-    }
-
+    User? user = (User?)ViewData["user"];
     ViewData["Title"] = "user";
 }
 
@@ -16,11 +10,22 @@
     <h1 class="display-4">welcome @user?.name</h1>
     <div class="row">
         <div class="col justify-content-lg-start">
-            <img class="user-img" src="~/uploadImages/@user?.profilePicture">
+            @if (!(user?.profilePicture == null || user?.profilePicture == ""))
+            {
+                <img class="user-img" src="~/uploadImages/@user?.profilePicture">
+            }
+             <a class="btn bg-orange t-color-white px-4" href="@Url.Action("UploadProfilePic", "userControllers")">change profile picture</a>
        </div>
        <div class="col">
            <h1 class="display-6">posts</h1>
        </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row ">
+        <div class="col text-end">
+            <a class="btn bg-orange t-color-white px-4" href="@Url.Action("Logout", "userControllers")">Logout</a>
+        </div>
     </div>
     
 

@@ -9,53 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ASPDotNetCrud
 build_property.RootNamespace = ASPDotNetCrud
-build_property.ProjectDir = C:\Users\dogef\Documents\C# project\aspDotNetCore\ASPDotNetCrud\
+build_property.ProjectDir = C:\Users\dogef\Documents\C# project\aspDotNetCore\aspDotNetCoreGit\ASPDotNetCrud\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dogef\Documents\C# project\aspDotNetCore\ASPDotNetCrud
+build_property.MSBuildProjectDirectory = C:\Users\dogef\Documents\C# project\aspDotNetCore\aspDotNetCoreGit\ASPDotNetCrud
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Account/login.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Account/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Account/register.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Account/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxyZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Home/Index.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Post/community.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Post/community.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxjb21tdW5pdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Post/uploadFile.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Post/uploadFile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFx1cGxvYWRGaWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Shared/Error.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/User/user.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/User/user.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx1c2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/_ViewImports.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/_ViewStart.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dogef/Documents/C\# project/aspDotNetCore/ASPDotNetCrud/Views/Shared/_Layout.cshtml]
+[C:/Users/dogef/Documents/C\# project/aspDotNetCore/aspDotNetCoreGit/ASPDotNetCrud/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-of567uzs7s

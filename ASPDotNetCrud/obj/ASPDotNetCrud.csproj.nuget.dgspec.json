@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\ASPDotNetCrud\\ASPDotNetCrud.csproj": {}
+    "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\ASPDotNetCrud.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\ASPDotNetCrud\\ASPDotNetCrud.csproj": {
+    "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\ASPDotNetCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\ASPDotNetCrud\\ASPDotNetCrud.csproj",
+        "projectUniqueName": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\ASPDotNetCrud.csproj",
         "projectName": "ASPDotNetCrud",
-        "projectPath": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\ASPDotNetCrud\\ASPDotNetCrud.csproj",
+        "projectPath": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\ASPDotNetCrud.csproj",
         "packagesPath": "C:\\Users\\dogef\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\ASPDotNetCrud\\obj\\",
+        "outputPath": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

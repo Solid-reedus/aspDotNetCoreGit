@@ -74,6 +74,27 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
+        public static bool InsertUser(string name, string password, string? profilePicture = null)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string request = "INSERT INTO users (user_name, user_password) " +
+                                 "VALUES (@name, @password)";
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                // You should hash the password before storing it for security reasons.
+                // Here, we assume that the password is already hashed.
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
+
+
         public static User getUser(string _name, string _password)
         {
             User user = new User();

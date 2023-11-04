@@ -11,11 +11,6 @@ namespace ASPDotNetCrud.Utility
     public static class SessionUtility
     {
 
-        private static readonly JsonSerializerSettings settings = new JsonSerializerSettings
-        {
-            Converters = { new User() },
-        };
-
         public enum SessionKeys
         {
             userSession,
@@ -30,6 +25,13 @@ namespace ASPDotNetCrud.Utility
             string data = JsonConvert.SerializeObject(value);
             httpContext.Session.SetString(keyString, data);
         }
+
+        public static void Remove(SessionKeys key, HttpContext httpContext)
+        {
+            string keyString = key.ToString();
+            httpContext.Session.Remove(keyString);
+        }
+
 
         public static User GetUserFromSession(SessionKeys key, HttpContext httpContext)
         {

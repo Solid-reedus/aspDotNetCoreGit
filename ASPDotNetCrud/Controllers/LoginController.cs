@@ -22,20 +22,23 @@ namespace ASPDotNetCrud.Controllers
 
             if (inputIsCorrect)
             {
-                //set current user as input
-
                 ViewData["loginPopup"] = "";
                 User currentUser = MysqlUtility.getUser(_name, p);
 
                 SessionUtility.Set(SessionKeys.userSession, currentUser, HttpContext);
-                return View("~/Views/User/user.cshtml");
+                SessionUtility.Set(SessionKeys.userName, currentUser.name, HttpContext);
+
+                if(!(currentUser.profilePicture == null || currentUser.profilePicture == ""))
+                {
+                    SessionUtility.Set(SessionKeys.userPic, currentUser.profilePicture, HttpContext);
+                }
+
+                return RedirectToAction(actionName: "User", controllerName: "userControllers");
             }
             else
             {
                 ViewData["loginPopup"] = "user doesnt exsist";
                 return View("~/Views/Account/login.cshtml");
-
-                //C:\Users\dogef\Documents\C# project\aspDotNetCore\ASPDotNetCrud\Views\Home\community.cshtml
             }
 
         }
