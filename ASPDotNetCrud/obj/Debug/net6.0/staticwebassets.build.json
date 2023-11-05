@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W2/sNmkoAQWeJ8XGCdxlkY1svvBcWeqIaHczbMlTT8I=",
+  "Hash": "E1K9bGJZK18Ely4LbtVD5tYYf5+xhBvuIo5rlAlxE+I=",
   "Source": "ASPDotNetCrud",
   "BasePath": "_content/ASPDotNetCrud",
   "Mode": "Default",
@@ -1171,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadImages\\9ba5c544-947a-4a9c-8377-bf72f9c5855a_4e86bddbdaa5dfad529cc1923b7be73a_c5_720x720.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png"
     },
     {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg",

@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ASPDotNetCrud.Utility;
-using static ASPDotNetCrud.Utility.SessionUtility;
+//using static ASPDotNetCrud.Utility.SessionService;
+using static ASPDotNetCrud.Services.SessionService;
 using static ASPDotNetCrud.Utility.MysqlUtility;
 using ASPDotNetCrud.Models;
+using ASPDotNetCrud.Services;
 
 namespace ASPDotNetCrud.Controllers
 {
@@ -12,6 +14,13 @@ namespace ASPDotNetCrud.Controllers
         public IActionResult Login()
         {
             return View("~/Views/Account/login.cshtml");
+        }
+
+        private readonly SessionService sessionService;
+
+        public LoginController(SessionService _sessionService)
+        {
+            sessionService = _sessionService;
         }
 
 
@@ -25,12 +34,14 @@ namespace ASPDotNetCrud.Controllers
                 ViewData["loginPopup"] = "";
                 User currentUser = MysqlUtility.getUser(_name, p);
 
-                SessionUtility.Set(SessionKeys.userSession, currentUser, HttpContext);
-                SessionUtility.Set(SessionKeys.userName, currentUser.name, HttpContext);
+                sessionService.Set(SessionKeys.userSession, currentUser);
+                sessionService.Set(SessionKeys.userName, currentUser.name);
+
+
 
                 if(!(currentUser.profilePicture == null || currentUser.profilePicture == ""))
                 {
-                    SessionUtility.Set(SessionKeys.userPic, currentUser.profilePicture, HttpContext);
+                    sessionService.Set(SessionKeys.userPic, currentUser.profilePicture);
                 }
 
                 return RedirectToAction(actionName: "User", controllerName: "userControllers");

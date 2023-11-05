@@ -1,6 +1,8 @@
 ﻿@using ASPDotNetCrud.Utility;
-@using static ASPDotNetCrud.Utility.SessionUtility;
-
+@inject IHttpContextAccessor HttpContextAccessor
+@using static ASPDotNetCrud.Services.SessionService;
+@using Newtonsoft.Json;
+@using Newtonsoft.Json.Linq;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,21 +54,18 @@
 
                 <div class="d-flex">
                     @{
-                        if (SessionVariableExists(SessionKeys.userName, Context))
+                        string? nameData = HttpContextAccessor?.HttpContext?.Session.GetString(SessionKeys.userName.ToString());
+                        string? pictureData = HttpContextAccessor?.HttpContext?.Session.GetString(SessionKeys.userPic.ToString());
+
+                        if (nameData != null)
                         {
-                            string userName = SessionUtility.Get<string>(SessionKeys.userName, Context);
-                            if (userName != null)
-                            {
-                                <h1>@userName</h1>
-                            }
+                            string? userName = JsonConvert.DeserializeObject<string>(nameData);
+                            <h1>@userName</h1>
                         }
-                        if (SessionVariableExists(SessionKeys.userPic, Context))
+                        if (pictureData != null)
                         {
-                            string? userPic = SessionUtility.Get<string>(SessionKeys.userPic, Context);
-                            if (userPic != null)
-                            {
-                                <img class="header-img" src="~/uploadImages/@userPic"/>
-                            }
+                            string? userPic = JsonConvert.DeserializeObject<string>(pictureData);
+                            <img class="header-img" src="~/uploadImages/@userPic"/>
                         }
                     }
                 </div>

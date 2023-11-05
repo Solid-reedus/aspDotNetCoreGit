@@ -1,7 +1,7 @@
 ﻿using ASPDotNetCrud.Models;
 using ASPDotNetCrud.Utility;
 using Microsoft.AspNetCore.Mvc;
-using static ASPDotNetCrud.Utility.SessionUtility;
+//using static ASPDotNetCrud.Utility.SessionService;
 
 namespace ASPDotNetCrud.Controllers
 {
@@ -28,7 +28,7 @@ namespace ASPDotNetCrud.Controllers
                 MysqlUtility.InsertUser(_name, p);
 
                 User currentUser = MysqlUtility.getUser(_name, p);
-                SessionUtility.Set(SessionKeys.userSession, currentUser, HttpContext);
+                //SessionService.Set(SessionKeys.userSession, currentUser, HttpContext);
                 return RedirectToAction(actionName: "User", controllerName: "userControllers");
             }
             else

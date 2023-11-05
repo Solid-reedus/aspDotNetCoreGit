@@ -80,7 +80,7 @@ namespace ASPDotNetCrud.Models
 
         public string name { get; private set; }
         public string? profilePicture { get; private set; }
-        uint id { get; set; }
+        public uint id { get; private set; }
 
     }
 }

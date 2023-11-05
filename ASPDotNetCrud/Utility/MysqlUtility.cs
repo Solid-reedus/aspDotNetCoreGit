@@ -6,10 +6,19 @@ namespace ASPDotNetCrud.Utility
 {
     public static class MysqlUtility
     {
+        public enum UserProperties
+        {
+            name,
+            password,
+            profilepic
+        }
+
         private static MySqlConnection GetConnection()
         {
             return new MySqlConnection("Server=localhost;User ID=root;Password=;Database=aspdotnetcrud_db");
         }
+
+
 
         public static List<Community> GetCommunities()
         {
@@ -54,9 +63,43 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
-        public static void MakeUser(string _name, string _password)
+        public static bool UpdateUser(uint who, UserProperties what, string newValue)
         {
+            string target = "";
+            switch (what)
+            {
+                case UserProperties.name:
+                    target = "user_name";
+                    break;
+                case UserProperties.password:
+                    target = "user_password";
+                    break;
+                case UserProperties.profilepic:
+                    target = "user_prof_pic_route";
+                    break;
+                default:
+                    break;
+            }
 
+            if (!string.IsNullOrEmpty(target))
+            {
+                using (MySqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string request = $"UPDATE users SET {target} = @newValue WHERE user_id = @who";
+
+                    MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                    cmd.Parameters.AddWithValue("@newValue", newValue);
+                    cmd.Parameters.AddWithValue("@who", who);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+
+            return false;
         }
 
         public static bool UserExists(string _name, string _password)
@@ -64,8 +107,10 @@ namespace ASPDotNetCrud.Utility
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string request = $"SELECT * FROM users WHERE user_name = '{_name}' AND user_password = '{_password}'";
+                string request = "SELECT * FROM users WHERE user_name = @UserName AND user_password = @Password";
                 MySqlCommand cmd = new MySqlCommand(request, conn);
+                cmd.Parameters.AddWithValue("@UserName", _name);
+                cmd.Parameters.AddWithValue("@Password", _password); // Hash the input password
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -73,6 +118,7 @@ namespace ASPDotNetCrud.Utility
                 }
             }
         }
+
 
         public static bool InsertUser(string name, string password, string? profilePicture = null)
         {

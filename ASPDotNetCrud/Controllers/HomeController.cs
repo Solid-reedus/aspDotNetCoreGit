@@ -23,35 +23,6 @@ namespace ASPDotNetCrud.Controlzlers
             return View("index");
         }
 
-
-        /*
-        public IActionResult uploadFile()
-        {
-            return View("uploadFile");
-        }
-
-        public IActionResult Community()
-        {
-            return View("community");
-        }
-
-        //public IActionResult User()
-        //{
-        //    return View("user");
-        //}
-
-        public IActionResult Login()
-        {
-            return View("login");
-        }
-
-        public IActionResult Register()
-        {
-            return View("register");
-        }
-
-        */
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

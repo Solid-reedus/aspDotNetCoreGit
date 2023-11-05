@@ -2,21 +2,31 @@
 using ASPDotNetCrud.Utility;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using static ASPDotNetCrud.Utility.SessionUtility;
+using static ASPDotNetCrud.Services.SessionService;
+using static ASPDotNetCrud.Utility.MysqlUtility;
+using ASPDotNetCrud.Services;
 
 namespace ASPDotNetCrud.Controllers
 {
     public class userControllers : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public userControllers(IWebHostEnvironment webHostEnvironment)
+        private readonly SessionService sessionService;
+
+        public userControllers(IWebHostEnvironment webHostEnvironment, SessionService _sessionService)
         {
+            sessionService = _sessionService;
             _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult User()
         {
-            User user = SessionUtility.GetUserFromSession(SessionKeys.userSession, HttpContext);
+            Console.WriteLine("user controller \n");
+
+            User user =  sessionService.GetUserFromSession(SessionKeys.userSession);
+
+            //SessionUtility.Set(SessionKeys.userSession, user, HttpContext);
+
             if (user == null)
             {
                 return View("~/Views/Home/Index.cshtml");
@@ -29,27 +39,61 @@ namespace ASPDotNetCrud.Controllers
         public IActionResult UploadProfilePic(IFormFile imageFile)
         {
 
+            User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
+
+            if (user == null)
+            {
+                Console.WriteLine("error user is null");
+                return View("~/Views/user/user.cshtml");
+            }
 
             if (imageFile != null && imageFile.Length > 0)
             {
-                var uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploadImages");
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                var newFilePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Save the new profile picture
+                using (var stream = new FileStream(newFilePath, FileMode.Create))
                 {
                     imageFile.CopyTo(stream);
                 }
 
-                //uniqueFileName
+                if (System.IO.File.Exists(newFilePath))
+                {
+                    // Check if the user already had a profile picture
+                    if (!string.IsNullOrEmpty(user.profilePicture))
+                    {
+                        // Delete the old profile picture file
+                        string oldFilePath = Path.Combine(uploadsFolder, user.profilePicture);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+                    // Update user's profile picture and session variable
+                    user.SetProfilePic(uniqueFileName);
+                    Console.WriteLine("uniqueFileName = " + uniqueFileName);
+
+                    MysqlUtility.UpdateUser(user.id, UserProperties.profilepic, uniqueFileName);
+
+                    sessionService.Set(SessionKeys.userSession, user);
+                    sessionService.Set(SessionKeys.userPic, uniqueFileName);
+
+                    return View("~/Views/user/user.cshtml");
+                }
             }
+
             return View("~/Views/user/user.cshtml");
         }
 
+
         public IActionResult Logout()
         {
-            SessionUtility.Remove(SessionKeys.userSession, HttpContext);
-            SessionUtility.Remove(SessionKeys.userName, HttpContext);
-            SessionUtility.Remove(SessionKeys.userPic, HttpContext);
+            sessionService.Remove(SessionKeys.userSession);
+            sessionService.Remove(SessionKeys.userName);
+            sessionService.Remove(SessionKeys.userPic);
 
             ViewData["user"] = null;
 
