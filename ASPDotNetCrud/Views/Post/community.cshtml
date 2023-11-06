@@ -47,17 +47,16 @@
         <div class="col">
 
             <input type="text" id="searchInput" placeholder="Search communities...">
-            <div id="searchResults"></div>
+            <div class="bg-grey" id="searchResults"></div>
 
-            @if (communityId != null)
+            @if (communityId != null && ViewData["userId"] != null)
             {
                 <a class="btn bg-orange t-color-white  mt-3" href="@Url.Action("MakePost", "makePost")?pageId=@communityId">make a post on @ViewData["communityname"]</a>
             }
 
             <script>
-                // Function to filter and update results
-                // Function to filter and update results
-                function filterResults() {
+                function filterResults() 
+                {
                     const input = document.getElementById("searchInput").value.toLowerCase();
                     const resultsDiv = document.getElementById("searchResults");
 
@@ -74,11 +73,15 @@
                         );
 
 
-                        filteredCommunities.forEach(result => {
+                        filteredCommunities.forEach(result => 
+                        {
                             const resultLink = document.createElement("a");
                             resultLink.textContent = result['name'];
                             resultLink.href = `?pageId=${result['id']}`; // Replace with your URL format
                             resultLink.classList.add("community-link"); // Add a CSS class for styling
+                            resultLink.classList.add("py-1");
+                            resultLink.classList.add("t-color-white");
+                            resultLink.classList.add("t-hover-color-orange");
                             resultsDiv.appendChild(resultLink);
                         });
 
@@ -89,10 +92,7 @@
                         console.log("input is empty");
                     }
                 }
-
-                // Event listener for input changes
                 document.getElementById("searchInput").addEventListener("input", filterResults);
-
 
             </script>
 
@@ -106,32 +106,44 @@
             foreach (Post post in posts)
             {
                 <div class="my-2 bg-grey">
+                    <div class="row">
+                        <div class="col-md">
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-10 text-start">
-                            <h1 class="pl-5 post-title ">@post.title</h1>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 text-start">
+                                    <h1 class="pl-5 post-title ">@post.title</h1>
+                                </div>
+                       
+
+                            </div>
+
+                            @if (post.subTitle != null && post.subTitle != "")
+                            {
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8 text-start">
+                                        <h3>@post.subTitle</h3>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (post.picture != null && post.picture != "")
+                            {
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="post-img" src="~/uploadImages/@post?.picture">
+                                    </div>
+                                </div>
+                            }
                         </div>
+
+                        @if (post?.postUser == (uint?)ViewData["userId"])
+                        {
+                            <div class="col-md-2 mb-auto mt-3">
+                                <a class="btn bg-danger " href="@Url.Action("MakePost", "makePost")?pageId=@communityId">delete post</a>
+                            </div>
+                        }
+
                     </div>
-
-
-                    @if (post.subTitle != null && post.subTitle != "")
-                    {
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 text-start">
-                                <h3>@post.subTitle</h3>
-                            </div>
-                        </div>
-                    }
-
-                    @if (post.picture != null && post.picture != "")
-                    {
-                        <div class="row">
-                            <div class="col">
-                                <img class="post-img" src="~/uploadImages/@post?.picture">
-                            </div>
-                        </div>
-                    }
-
                 </div>
             }
         }

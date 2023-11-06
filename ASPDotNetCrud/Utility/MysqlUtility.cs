@@ -129,6 +129,21 @@ namespace ASPDotNetCrud.Utility
             return false;
         }
 
+        public static void DeleteUser(uint who)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string request = "DELETE FROM users WHERE user_id = @who";
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                cmd.Parameters.AddWithValue("@who", who);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
         public static bool UserExists(string _name, string _password)
         {
             using (MySqlConnection conn = GetConnection())

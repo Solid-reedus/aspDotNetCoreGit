@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/yBz2H+sV6yUtUhqs2SuDX9rwesBp+m1AHHiLcwuE5Y=",
+  "Hash": "K897CkB3gGT4vZpMiEkVOk/GsB8bfjGr5oLD5HLL+lg=",
   "Source": "ASPDotNetCrud",
   "BasePath": "_content/ASPDotNetCrud",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\0665f979-ba8c-4174-bb8d-6e157fa0e565_Feddy.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/0665f979-ba8c-4174-bb8d-6e157fa0e565_Feddy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\0665f979-ba8c-4174-bb8d-6e157fa0e565_Feddy.png"
+    },
+    {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\1191e252-98c0-458a-98a2-89f7458dfe0e_DMC1_Red_Orb.png",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
@@ -1120,6 +1137,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadImages\\1191e252-98c0-458a-98a2-89f7458dfe0e_DMC1_Red_Orb.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png"
     },
     {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg",
@@ -1139,6 +1190,23 @@
       "OriginalItemSpec": "wwwroot\\uploadImages\\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg"
     },
     {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png"
+    },
+    {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
@@ -1156,12 +1224,12 @@
       "OriginalItemSpec": "wwwroot\\uploadImages\\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg"
     },
     {
-      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png",
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
       "BasePath": "_content/ASPDotNetCrud",
-      "RelativePath": "uploadImages/7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png",
+      "RelativePath": "uploadImages/74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1170,7 +1238,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png"
+      "OriginalItemSpec": "wwwroot\\uploadImages\\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg"
     },
     {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
@@ -1224,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\uploadImages\\a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png"
     },
     {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG"
+    },
+    {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
@@ -1239,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg"
     },
     {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg",
@@ -1273,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadImages\\f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg"
     }
   ]
 }

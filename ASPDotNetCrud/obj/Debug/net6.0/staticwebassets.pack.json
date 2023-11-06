@@ -253,20 +253,36 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\0665f979-ba8c-4174-bb8d-6e157fa0e565_Feddy.png",
+      "PackagePath": "staticwebassets\\uploadImages\\0665f979-ba8c-4174-bb8d-6e157fa0e565_Feddy.png"
+    },
+    {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\1191e252-98c0-458a-98a2-89f7458dfe0e_DMC1_Red_Orb.png",
       "PackagePath": "staticwebassets\\uploadImages\\1191e252-98c0-458a-98a2-89f7458dfe0e_DMC1_Red_Orb.png"
+    },
+    {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
+      "PackagePath": "staticwebassets\\uploadImages\\1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png"
+    },
+    {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png",
+      "PackagePath": "staticwebassets\\uploadImages\\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png"
     },
     {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg",
       "PackagePath": "staticwebassets\\uploadImages\\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg"
     },
     {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png",
+      "PackagePath": "staticwebassets\\uploadImages\\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png"
+    },
+    {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg",
       "PackagePath": "staticwebassets\\uploadImages\\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg"
     },
     {
-      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png",
-      "PackagePath": "staticwebassets\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png"
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg",
+      "PackagePath": "staticwebassets\\uploadImages\\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg"
     },
     {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
@@ -281,8 +297,16 @@
       "PackagePath": "staticwebassets\\uploadImages\\a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png"
     },
     {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG",
+      "PackagePath": "staticwebassets\\uploadImages\\a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG"
+    },
+    {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png",
       "PackagePath": "staticwebassets\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png"
+    },
+    {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg",
+      "PackagePath": "staticwebassets\\uploadImages\\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg"
     },
     {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg",
@@ -291,6 +315,10 @@
     {
       "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png",
       "PackagePath": "staticwebassets\\uploadImages\\f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png"
+    },
+    {
+      "Id": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg",
+      "PackagePath": "staticwebassets\\uploadImages\\f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ASPDotNetCrud.Microsoft.AspNetCore.StaticWebAssets.props",

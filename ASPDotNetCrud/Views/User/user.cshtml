@@ -1,5 +1,4 @@
 ﻿@using ASPDotNetCrud.Utility;
-@*@using static ASPDotNetCrud.Utility.SessionService;*@
 @{
     User? user = (User?)ViewData["user"];
     ViewData["Title"] = "user";
@@ -9,32 +8,74 @@
 
     <h1 class="display-4">welcome @user?.name</h1>
     <div class="row">
-        <div class="col justify-content-center ">
+        <div class="col justify-content-center">
 
-            @if (!(user?.profilePicture == null || user?.profilePicture == ""))
-            {
-                <img class="user-img" src="~/uploadImages/@user?.profilePicture">
-            }
+        @if (!(user?.profilePicture == null || user?.profilePicture == ""))
+        {
+            <img class="user-img" src="~/uploadImages/@user?.profilePicture">
+        }
 
-            <div class="d-flex justify-content-center">
-                <form asp-action="UploadProfilePic" asp-controller="userControllers" method="post" enctype="multipart/form-data">
-                    <input class="form-control bg-orange t-color-white" name="imageFile" type="file" id="imageFile" accept=".jpg, .jpeg, .png">
-                    <button type="submit" class="btn bg-orange t-color-white px-4">Upload Image</button>
-                </form>
-            </div>
+        <div class="d-flex justify-content-center">
+            <form asp-action="UploadProfilePic" asp-controller="userControllers" method="post" enctype="multipart/form-data">
+                <input class="form-control bg-orange t-color-white" name="imageFile" type="file" id="imageFile" accept=".jpg, .jpeg, .png">
+                <button type="submit" class="btn bg-orange t-color-white px-4">Upload Image</button>
+            </form>
+        </div>
 
-       </div>
+        </div>
        <div class="col">
            <h1 class="display-6">posts</h1>
        </div>
     </div>
     <div class="row">
     </div>
-    <div class="row">
-        <div class="col text-end">
-            <a class="btn bg-orange t-color-white px-4" href="@Url.Action("Logout", "userControllers")">Logout</a>
+    <div class="row justify-content-end">
+        <div class="col-md-2  text-end">
+            <a class="btn bg-orange t-color-white" href="@Url.Action("Logout", "userControllers")">Logout</a>
+        </div>
+        <div class="col-md-2  text-end">
+            <button class="btn bg-danger t-color-white " id="deleteButton">delete acount</button>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () 
+                {
+                    var deleteButton = document.getElementById("deleteButton");
+                    var modal = new bootstrap.Modal(document.getElementById("confirmationModal"));
+                    var cancelButton = document.querySelector(".btn-secondary");
+
+                    deleteButton.addEventListener("click", function () 
+                    {
+                        modal.show();
+                    });
+
+                    cancelButton.addEventListener("click", function () 
+                    {
+                        modal.hide();
+                    });
+                }); 
+
+            </script>
+
         </div>
     </div>
-    
+   
+</div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-black">
+      <div class="modal-header bg-grey">
+        <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your account?
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-danger" href="@Url.Action("DeleteAcount", "userControllers")">Delete</a>
+      </div>
+    </div>
+  </div>
 </div>

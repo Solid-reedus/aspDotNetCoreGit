@@ -88,6 +88,24 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/user/user.cshtml");
         }
 
+        public IActionResult DeleteAcount()
+        {
+
+            User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
+            if (user == null) 
+            {
+                return View("~/Views/Home/Index.cshtml");
+            }
+
+            MysqlUtility.DeleteUser(user.id);
+
+            sessionService.Remove(SessionKeys.userSession);
+            sessionService.Remove(SessionKeys.userName);
+            sessionService.Remove(SessionKeys.userPic);
+            ViewData["user"] = null;
+
+            return View("~/Views/Home/Index.cshtml");
+        }
 
         public IActionResult Logout()
         {

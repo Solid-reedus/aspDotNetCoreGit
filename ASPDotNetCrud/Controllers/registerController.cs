@@ -1,12 +1,20 @@
 ﻿using ASPDotNetCrud.Models;
+using ASPDotNetCrud.Services;
 using ASPDotNetCrud.Utility;
 using Microsoft.AspNetCore.Mvc;
-//using static ASPDotNetCrud.Utility.SessionService;
+using static ASPDotNetCrud.Services.SessionService;
 
 namespace ASPDotNetCrud.Controllers
 {
     public class registerController : Controller
     {
+        private readonly SessionService sessionService;
+
+        public registerController(SessionService _sessionService)
+        {
+            sessionService = _sessionService;
+        }
+
         public IActionResult Register()
         {
             return View("~/Views/Account/register.cshtml");
@@ -28,7 +36,10 @@ namespace ASPDotNetCrud.Controllers
                 MysqlUtility.InsertUser(_name, p);
 
                 User currentUser = MysqlUtility.getUser(_name, p);
-                //SessionService.Set(SessionKeys.userSession, currentUser, HttpContext);
+
+                sessionService.Set(SessionKeys.userSession, currentUser);
+                sessionService.Set(SessionKeys.userName, currentUser.name);
+
                 return RedirectToAction(actionName: "User", controllerName: "userControllers");
             }
             else
