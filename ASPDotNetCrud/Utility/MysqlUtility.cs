@@ -46,6 +46,33 @@ namespace ASPDotNetCrud.Utility
             return communities;
         }
 
+        public static List<Post> GetCommunityPosts(uint community)
+        {
+            List<Post> posts = new List<Post>();
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string request = "SELECT * FROM posts WHERE post_community = " + community.ToString();
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        uint id = reader.GetUInt32("post_id");
+                        string title = reader.GetString("post_title");
+                        string subTitle = reader.GetString("post_subTitle");
+                        string imgRoute = reader.GetString("post_img_route");
+                        uint owner = reader.GetUInt32("post_user");
+
+                        posts.Add(new Post(title, id, subTitle, imgRoute, owner, community));
+                    }
+                }
+            }
+            return posts;
+        }
+
+
         public static bool UserNameIsTaken(string _name)
         {
             using (MySqlConnection conn = GetConnection())
@@ -133,6 +160,31 @@ namespace ASPDotNetCrud.Utility
                 // Here, we assume that the password is already hashed.
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@password", password);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
+
+        public static bool MakeNewPost(string title, string? subTitle, string? imgRoute, uint who, uint community)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string request = "INSERT INTO posts(post_title, post_subTitle, post_community, post_img_route, post_score, post_user) " +
+                                 "VALUES (@title, @subTitle, @community, @imgRoute, 0, @who)";
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                cmd.Parameters.AddWithValue("@title", title);
+                cmd.Parameters.AddWithValue("@community", community);
+                cmd.Parameters.AddWithValue("@who", who);
+
+                string _subtitle = subTitle ?? string.Empty;
+                string _imgRoute = imgRoute ?? string.Empty;
+
+                cmd.Parameters.AddWithValue("@subTitle", _subtitle);
+                cmd.Parameters.AddWithValue("@imgRoute", _imgRoute);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
 

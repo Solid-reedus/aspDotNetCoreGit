@@ -60,7 +60,9 @@
                         if (nameData != null)
                         {
                             string? userName = JsonConvert.DeserializeObject<string>(nameData);
-                            <h1>@userName</h1>
+                            <a href="@Url.Action("User", "userControllers")">
+                                <h1 class="t-color-orange t-hover-color-white  my-2 mx-4 t-y-center" >@userName</h1>
+                            </a>
                         }
                         if (pictureData != null)
                         {

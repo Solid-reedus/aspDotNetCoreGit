@@ -13,29 +13,21 @@ namespace ASPDotNetCrud.Controllers
             return MysqlUtility.GetCommunities();
         }
 
-        public List<Post>? GetPosts(uint communityId)
-        {
-            return null;
-        }
-
         public IActionResult Community()
         {
             List<Community> communities = GetCommunities();
             ViewData["communities"] = communities;
 
-            uint? communityId = HttpRequestUtility.GETrequest<uint>("id", HttpContext);
+            uint? communityId = HttpRequestUtility.GETrequest<uint>("pageId", HttpContext);
 
             if (communityId != null)
             {
-                List<Post>? posts = GetPosts(communityId.Value);
+                List<Post>? posts = MysqlUtility.GetCommunityPosts(communityId.Value);
+                ViewData["posts"] = posts;
                 ViewData["communityId"] = communityId;
             }
 
-
             return View("~/Views/Post/community.cshtml");
         }
-
-        //SELECT * FROM posts WHERE post_community = 1 LIMIT 0, 10;
-        //ORDER BY `questions`.`question_id` DESC
     }
 }

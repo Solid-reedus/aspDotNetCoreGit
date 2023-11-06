@@ -3,7 +3,7 @@
 
     uint? communityId = (uint?)ViewData["communityId"];
     List<Community>? communities = (List<Community>?)ViewData["communities"];
-
+    List<Post>? posts = (List<Post>?)ViewData["posts"];
 
     ViewData["Title"] = "community";
 
@@ -15,6 +15,7 @@
             // Subtract 1 from the communityId to use it as an index
             uint index = communityId.Value - 1;
             ViewData["communityTitle"] = "welcome to " + communities[(int)index].name;
+            ViewData["communityname"] = communities[(int)index].name;
         }
     }
     else
@@ -25,13 +26,33 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">@ViewData["communityTitle"]</h1>
 
     <div class="row">
         <div class="col">
+            @if (!string.IsNullOrEmpty(ViewData["alert"] as string))
+            {
+                <div class="alert alert-danger mt-3">@ViewData["alert"]</div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">@ViewData["communityTitle"]</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+
             <input type="text" id="searchInput" placeholder="Search communities...">
             <div id="searchResults"></div>
 
+            @if (communityId != null)
+            {
+                <a class="btn bg-orange t-color-white  mt-3" href="@Url.Action("MakePost", "makePost")?pageId=@communityId">make a post on @ViewData["communityname"]</a>
+            }
 
             <script>
                 // Function to filter and update results
@@ -56,17 +77,18 @@
                         filteredCommunities.forEach(result => {
                             const resultLink = document.createElement("a");
                             resultLink.textContent = result['name'];
-                            resultLink.href = `?id=${result['id']}`; // Replace with your URL format
+                            resultLink.href = `?pageId=${result['id']}`; // Replace with your URL format
                             resultLink.classList.add("community-link"); // Add a CSS class for styling
                             resultsDiv.appendChild(resultLink);
                         });
 
                         console.log(filteredCommunities);
-                    } else {
+                    } 
+                    else 
+                    {
                         console.log("input is empty");
                     }
                 }
-
 
                 // Event listener for input changes
                 document.getElementById("searchInput").addEventListener("input", filterResults);
@@ -74,12 +96,45 @@
 
             </script>
 
-        </div>
+        </div>    
     </div>
 
     <div class="row">
 
-        @*here append a post foreach post belongin to a community*@
+        @if (posts != null)
+        {
+            foreach (Post post in posts)
+            {
+                <div class="my-2 bg-grey">
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 text-start">
+                            <h1 class="pl-5 post-title ">@post.title</h1>
+                        </div>
+                    </div>
+
+
+                    @if (post.subTitle != null && post.subTitle != "")
+                    {
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-start">
+                                <h3>@post.subTitle</h3>
+                            </div>
+                        </div>
+                    }
+
+                    @if (post.picture != null && post.picture != "")
+                    {
+                        <div class="row">
+                            <div class="col">
+                                <img class="post-img" src="~/uploadImages/@post?.picture">
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            }
+        }
 
 
 

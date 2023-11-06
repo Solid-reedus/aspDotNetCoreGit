@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "make a post";
+}
+
+
+<div class="text-center">
+
+    <h1 class="display-4">make a post</h1>
+    <div class="container d-inline-block">
+
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <form asp-action="MakeNewPost" asp-controller="makePost" method="post" enctype="multipart/form-data">
+                    <label for="title">title of your post</label>
+                    <input class="input-group" type="text" name="title" id="title" required>
+
+                    <label for="subtitle">(optional) text</label>
+                    <input class="input-group" type="text" name="subtitle" id="subtitle">
+
+                    <label for="imageFile">(optional) image</label>
+                    <input class="form-control bg-orange t-color-white" name="imageFile" type="file" id="imageFile" accept=".jpg, .jpeg, .png">
+
+                    <input class="btn bg-orange t-color-white px-3 mt-4" type="submit" value="Create Post">
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

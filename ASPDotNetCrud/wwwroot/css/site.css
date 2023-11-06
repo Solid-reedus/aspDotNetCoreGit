@@ -17,6 +17,23 @@ body
     color: #F2F2F2;
 }
 
+.bg-grey 
+{
+    background-color: #1a1d21;
+}
+
+.post-title 
+{
+    border-bottom: solid 2px #F2F2F2;
+}
+
+.post-img 
+{
+    max-height: 300px;
+    padding: 10px;
+}
+
+
 .t-color-orange 
 {
     color: #F96D00
@@ -35,6 +52,11 @@ body
 .t-hover-color-white:hover 
 {
     color: #F2F2F2
+}
+
+a 
+{
+    text-decoration: none;
 }
 
 .t-color-white 

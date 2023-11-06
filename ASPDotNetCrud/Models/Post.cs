@@ -11,7 +11,7 @@
             comments = new List<Post> { this };
         }
 
-        Post(string _title, uint _id, string? _subTitle, string? _picture)
+        public Post(string _title, uint _id, string? _subTitle, string? _picture, uint _postUser, uint _community)
         {
             title = _title;
             id = _id;
@@ -36,6 +36,8 @@
 
             score = 0;
             comments = new List<Post> { this };
+            postUser = _postUser;
+            community = _community;
         }
 
         public List<Post> GetComments()
@@ -56,13 +58,18 @@
         }
 
         public string title { get; private set; }
+
         public uint id { get; private set; }
+        public uint postUser { get; private set; }
+        public uint community { get; private set; }
+
         public string? picture { get; private set; }
+
         //comments
         public List<Post> comments { get; private set; }
 
         public long score { get; set; }
-        private string? subTitle { get; set; }
+        public string? subTitle { get; set; }
 
 
     }

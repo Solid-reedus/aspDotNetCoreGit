@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E1K9bGJZK18Ely4LbtVD5tYYf5+xhBvuIo5rlAlxE+I=",
+  "Hash": "/yBz2H+sV6yUtUhqs2SuDX9rwesBp+m1AHHiLcwuE5Y=",
   "Source": "ASPDotNetCrud",
   "BasePath": "_content/ASPDotNetCrud",
   "Mode": "Default",
@@ -1156,6 +1156,40 @@
       "OriginalItemSpec": "wwwroot\\uploadImages\\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg"
     },
     {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\7d7ae047-4df2-43ff-add5-de21d1274fe1_glasses_fill.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png"
+    },
+    {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\9ba5c544-947a-4a9c-8377-bf72f9c5855a_4e86bddbdaa5dfad529cc1923b7be73a_c5_720x720.jpeg",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
@@ -1173,12 +1207,12 @@
       "OriginalItemSpec": "wwwroot\\uploadImages\\9ba5c544-947a-4a9c-8377-bf72f9c5855a_4e86bddbdaa5dfad529cc1923b7be73a_c5_720x720.jpeg"
     },
     {
-      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png",
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png",
       "SourceId": "ASPDotNetCrud",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
       "BasePath": "_content/ASPDotNetCrud",
-      "RelativePath": "uploadImages/e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png",
+      "RelativePath": "uploadImages/a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,7 +1221,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadImages\\e871c0bf-0fbe-443e-98d8-93ad83993361_5bb0464641cbe.png"
+      "OriginalItemSpec": "wwwroot\\uploadImages\\a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png"
     },
     {
       "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg",
@@ -1205,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadImages\\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\uploadImages\\f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png",
+      "SourceId": "ASPDotNetCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dogef\\Documents\\C# project\\aspDotNetCore\\aspDotNetCoreGit\\ASPDotNetCrud\\wwwroot\\",
+      "BasePath": "_content/ASPDotNetCrud",
+      "RelativePath": "uploadImages/f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadImages\\f3b503b6-8c06-440c-9898-8981a1a7f9df_DMC1_Red_Orb.png"
     }
   ]
 }

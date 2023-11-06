@@ -31,6 +31,10 @@ namespace ASPDotNetCrud.Controllers
 
             if (inputIsCorrect)
             {
+                sessionService.Remove(SessionKeys.userSession);
+                sessionService.Remove(SessionKeys.userName);
+                sessionService.Remove(SessionKeys.userPic);
+
                 ViewData["loginPopup"] = "";
                 User currentUser = MysqlUtility.getUser(_name, p);
 
