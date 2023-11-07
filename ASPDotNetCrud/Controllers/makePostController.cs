@@ -20,23 +20,26 @@ namespace ASPDotNetCrud.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        // try to make a new post
         public IActionResult MakePost()
         {
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
             uint? communityId = HttpRequestUtility.GETrequest<uint>("pageId", HttpContext);
 
+            // if there is a id for de communityId then add send TempData of the id
             if (communityId != null)
             {
                 TempData["communityId"] = communityId.ToString();
             }
+            // if there isnt a communityId then return early something went wrong
             else
             {
                 ViewData["alert"] = "unable to find id of community";
-
                 return RedirectToAction(actionName: "community", controllerName: "communityController");
-                
             }
 
+            // is there isnt a user return early
+            // a post MUST have a user id
             if (user == null) 
             {
                 ViewData["alert"] = "unable to find user sesssion";
@@ -46,6 +49,8 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/Post/makePost.cshtml");
         }
 
+        // make a new post based on the community
+        // subtitle and imageFile are optional
         public IActionResult MakeNewPost(string title, string? subtitle, IFormFile imageFile)
         {
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
@@ -56,6 +61,8 @@ namespace ASPDotNetCrud.Controllers
                 communityId = (uint?)val;
             }
 
+            // if there isnt a a user or communityId return early
+            // something went wrong
             if (user == null || communityId == null)
             {
                 if (user == null)
@@ -82,14 +89,10 @@ namespace ASPDotNetCrud.Controllers
                 }
             }
 
-
             MysqlUtility.MakeNewPost(title, subtitle, uniqueFileName, user.id, (uint)communityId);
 
             return RedirectToAction("Community", "community");
-
         }
-
-
 
     }
 }

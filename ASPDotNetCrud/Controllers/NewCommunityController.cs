@@ -22,7 +22,7 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/Post/newCommunity.cshtml");
         }
         
-
+        //make a new community
         public IActionResult MakeNewCommunity(string title, string description)
         {
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);

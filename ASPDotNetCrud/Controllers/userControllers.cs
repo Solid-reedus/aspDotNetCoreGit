@@ -19,13 +19,10 @@ namespace ASPDotNetCrud.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        // get the user session varable and laod the page
         public IActionResult User()
         {
-            Console.WriteLine("user controller \n");
-
             User user =  sessionService.GetUserFromSession(SessionKeys.userSession);
-
-            //SessionUtility.Set(SessionKeys.userSession, user, HttpContext);
 
             if (user == null)
             {
@@ -36,11 +33,31 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/user/user.cshtml");
         }
 
+        // try to change the name of the user
+        // if the username is taken then cancel
+        public IActionResult ChangeName(string newName)
+        {
+            if (MysqlUtility.UserNameIsTaken(newName))
+            {
+                ViewData["loginPopup"] = "username is taken";
+                return View("~/Views/user/user.cshtml");
+            }
+
+            // if the new name is set then set the new session
+            User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
+            MysqlUtility.UpdateUser(user.id, UserProperties.name, newName);
+            user.SetNewname(newName);
+            sessionService.Set(SessionKeys.userSession, user);
+            sessionService.Set(SessionKeys.userName, user.name);
+            ViewData["user"] = user;
+
+            return View("~/Views/user/user.cshtml");
+        }
+
+        //upload 
         public IActionResult UploadProfilePic(IFormFile imageFile)
         {
-
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
-
             if (user == null)
             {
                 Console.WriteLine("error user is null");
@@ -49,8 +66,11 @@ namespace ASPDotNetCrud.Controllers
 
             if (imageFile != null && imageFile.Length > 0)
             {
+                //unique name of the file
                 string uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                //route to the uploadfolder 
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploadImages");
+                // combined path
                 var newFilePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 // Save the new profile picture
@@ -84,13 +104,12 @@ namespace ASPDotNetCrud.Controllers
                     return View("~/Views/user/user.cshtml");
                 }
             }
-
             return View("~/Views/user/user.cshtml");
         }
 
+        // delete the user and clear the session of the user
         public IActionResult DeleteAcount()
         {
-
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
             if (user == null) 
             {
@@ -107,6 +126,8 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/Home/Index.cshtml");
         }
 
+
+        //clear the session and redirect to the Index
         public IActionResult Logout()
         {
             sessionService.Remove(SessionKeys.userSession);

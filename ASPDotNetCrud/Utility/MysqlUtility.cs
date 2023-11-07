@@ -19,7 +19,7 @@ namespace ASPDotNetCrud.Utility
         }
 
 
-
+        // get all Communities
         public static List<Community> GetCommunities()
         {
             List<Community> communities = new List<Community>();
@@ -46,6 +46,7 @@ namespace ASPDotNetCrud.Utility
             return communities;
         }
 
+        // get all post from a surden community based on id
         public static List<Post> GetCommunityPosts(uint community)
         {
             List<Post> posts = new List<Post>();
@@ -72,7 +73,6 @@ namespace ASPDotNetCrud.Utility
             return posts;
         }
 
-
         public static bool UserNameIsTaken(string _name)
         {
             using (MySqlConnection conn = GetConnection())
@@ -89,6 +89,7 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
+        // update user data based on a enum
         public static bool UpdateUser(uint who, UserProperties what, string newValue)
         {
             string target = "";
@@ -147,7 +148,6 @@ namespace ASPDotNetCrud.Utility
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                //DELETE FROM posts WHERE post_id = 1
                 string request = "DELETE FROM posts WHERE post_id = @posId";
                 MySqlCommand cmd = new MySqlCommand(request, conn);
 
@@ -157,7 +157,6 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
-
         public static bool UserExists(string _name, string _password)
         {
             using (MySqlConnection conn = GetConnection())
@@ -166,7 +165,7 @@ namespace ASPDotNetCrud.Utility
                 string request = "SELECT * FROM users WHERE user_name = @UserName AND user_password = @Password";
                 MySqlCommand cmd = new MySqlCommand(request, conn);
                 cmd.Parameters.AddWithValue("@UserName", _name);
-                cmd.Parameters.AddWithValue("@Password", _password); // Hash the input password
+                cmd.Parameters.AddWithValue("@Password", _password);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -194,8 +193,8 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
-
-
+        // make new user
+        // profilePicture is optional
         public static bool InsertUser(string name, string password, string? profilePicture = null)
         {
             using (MySqlConnection conn = GetConnection())
@@ -214,6 +213,8 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
+        // make new post
+        // if subTitle or imgRoute is null then it will just be a ""
         public static bool MakeNewPost(string title, string? subTitle, string? imgRoute, uint who, uint community)
         {
             using (MySqlConnection conn = GetConnection())
@@ -239,7 +240,7 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
-
+        // will return a User class based on string _name and string _password
         public static User getUser(string _name, string _password)
         {
             User user = new User();

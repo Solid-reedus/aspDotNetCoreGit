@@ -6,48 +6,89 @@
 
 <div class="text-center">
 
-    <h1 class="display-4">welcome @user?.name</h1>
+    @if (!string.IsNullOrEmpty(ViewData["loginPopup"] as string))
+    {
+        <div class="alert alert-danger mt-3">@ViewData["loginPopup"]</div>
+    }
+
+
     <div class="row">
         <div class="col justify-content-center">
 
-        @if (!(user?.profilePicture == null || user?.profilePicture == ""))
-        {
-            <img class="user-img" src="~/uploadImages/@user?.profilePicture">
-        }
-
-        <div class="d-flex justify-content-center">
-            <form asp-action="UploadProfilePic" asp-controller="userControllers" method="post" enctype="multipart/form-data">
-                <input class="form-control bg-orange t-color-white" name="imageFile" type="file" id="imageFile" accept=".jpg, .jpeg, .png">
-                <button type="submit" class="btn bg-orange t-color-white px-4">Upload Image</button>
-            </form>
-        </div>
+            @if (!(user?.profilePicture == null || user?.profilePicture == ""))
+            {
+                <img class="user-img mt-2" src="~/uploadImages/@user?.profilePicture">
+            }
+            <div class="d-flex justify-content-center">
+                <form asp-action="UploadProfilePic" asp-controller="userControllers" method="post" enctype="multipart/form-data">
+                    <input class="form-control bg-orange t-color-white my-2" name="imageFile" type="file" id="imageFile" accept=".jpg, .jpeg, .png">
+                    <button type="submit" class="btn bg-orange t-color-white w-100 px-4">Upload Image</button>
+                </form>
+            </div>
 
         </div>
        <div class="col">
-           <h1 class="display-6">posts</h1>
+           <h1 class="display-6 my-3">@user?.name</h1>
+
+           <div class="bg-grey d-inline-block p-3 mb-3">
+               <button class="btn bg-orange t-color-white my-2 w-100" id="toggleForm">change name</button>
+
+                <div id="formContainer" style="display: none;">
+                    <form asp-action="ChangeName" asp-controller="userControllers" method="post">
+                        <input required type="text" name="newName" class="form-control w-auto mx-auto my-3" placeholder="name" aria-label="name" aria-describedby="basic-addon1">
+                        <button type="submit" class="btn bg-orange t-color-white my-2 w-100">new name</button>
+                    </form>
+                </div>
+
+                <script>
+                    document.getElementById("toggleForm").addEventListener("click", function () 
+                    {
+                        var formContainer = document.getElementById("formContainer");
+
+                        if (formContainer.style.display === "none" || formContainer.style.display === "") 
+                        {
+                            formContainer.style.display = "block";
+                        } 
+                        else 
+                        {
+                            formContainer.style.display = "none";
+                        }
+                    });
+                </script>
+           </div>
        </div>
     </div>
-    <div class="row">
-    </div>
+
     <div class="row justify-content-end">
+
         <div class="col-md-2  text-end">
             <a class="btn bg-orange t-color-white" href="@Url.Action("Logout", "userControllers")">Logout</a>
         </div>
+
         <div class="col-md-2  text-end">
             <button class="btn bg-danger t-color-white " id="deleteButton">delete acount</button>
 
+            @*
+                this is the script for the modal
+                when you click delete acount it will pop up a modal
+                in order that the user comfirms that he wants to delete his acount
+
+            *@
             <script>
+                //every time deleteButton is clicked it will run this code snippet
                 document.addEventListener("DOMContentLoaded", function () 
                 {
                     var deleteButton = document.getElementById("deleteButton");
                     var modal = new bootstrap.Modal(document.getElementById("confirmationModal"));
                     var cancelButton = document.querySelector(".btn-secondary");
 
+                    //show modal
                     deleteButton.addEventListener("click", function () 
                     {
                         modal.show();
                     });
 
+                    //hide the modal
                     cancelButton.addEventListener("click", function () 
                     {
                         modal.hide();
@@ -55,14 +96,17 @@
                 }); 
 
             </script>
-
         </div>
     </div>
-   
 </div>
 
 
-<!-- Modal -->
+@*
+    this is a modal 
+    it pops up when you want to delete your acount to make sure
+    you need to comfirm it
+*@
+
 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content bg-black">

@@ -7,7 +7,8 @@ public static class EncryptionUtility
 {
     // Encryption Key and Initialization Vector (IV)
     private static readonly string encryptionKey = "dBbg4EndlfGZP13F";
-    private static readonly string iv = "1234567890123456"; // 16-character initialization vector
+    // 16-character initialization vector
+    private static readonly string iv = "1234567890123456"; 
 
     public static string Encrypt(string plainText)
     {
@@ -54,4 +55,5 @@ public static class EncryptionUtility
             }
         }
     }
+
 }

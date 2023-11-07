@@ -23,12 +23,13 @@ namespace ASPDotNetCrud.Controllers
             sessionService = _sessionService;
         }
 
-
+        // check if the input of the login are correct
         public IActionResult CheckInput(string _name, string _password)
         {
             string p = EncryptionUtility.Encrypt(_password);
             bool inputIsCorrect = MysqlUtility.UserExists(_name, p);
 
+            // if the input is correct set new session for the new current user
             if (inputIsCorrect)
             {
                 sessionService.Remove(SessionKeys.userSession);
@@ -40,8 +41,6 @@ namespace ASPDotNetCrud.Controllers
 
                 sessionService.Set(SessionKeys.userSession, currentUser);
                 sessionService.Set(SessionKeys.userName, currentUser.name);
-
-
 
                 if(!(currentUser.profilePicture == null || currentUser.profilePicture == ""))
                 {

@@ -20,8 +20,12 @@ namespace ASPDotNetCrud.Controllers
             return MysqlUtility.GetCommunities();
         }
 
+
+        // load Community view and check for data
+        // if user is logged in give the view the user
+        // if a community is selected "aka get pageId isnt null" then load the post of that Community
         [HttpGet]
-        [Route("community")]
+        [Route("community")] // <-- this property makes this method able to be used outside this controller
         public IActionResult Community()
         {
             List<Community> communities = GetCommunities();
@@ -46,6 +50,7 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/Post/community.cshtml");
         }
 
+        //delete the post
         public IActionResult DeletePost(uint posId)
         {
             MysqlUtility.DeletePost(posId);

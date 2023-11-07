@@ -5,6 +5,11 @@ using Newtonsoft.Json.Linq;
 
 namespace ASPDotNetCrud.Models
 {
+    /*
+        [JsonConverter(typeof(User))] and : JsonConverter<User> 
+        are abtract classes that alows it to be pharsed as a json
+    */
+
     [JsonConverter(typeof(User))]
     public class User : JsonConverter<User>
     {
@@ -53,6 +58,7 @@ namespace ASPDotNetCrud.Models
             return user;
         }
 
+
         public User() 
         {
             name = "";
@@ -76,6 +82,11 @@ namespace ASPDotNetCrud.Models
         public void SetProfilePic(string scr)
         {
             profilePicture = scr;
+        }
+
+        public void SetNewname(string _name)
+        {
+            name = _name;
         }
 
         public string name { get; private set; }

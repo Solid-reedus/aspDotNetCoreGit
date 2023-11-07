@@ -7,10 +7,12 @@ namespace ASPDotNetCrud.Services
 {
     public class SessionService
     {
-        private IHttpContextAccessor _httpContextAccessor; // IHttpContextAccessor instance
+        private IHttpContextAccessor _httpContextAccessor; 
 
-        private static SessionService _instance; // Singleton instance
-        private static readonly object _lock = new object(); // Lock for thread safety
+        // Singleton instance
+        private static SessionService _instance; 
+        // Lock for thread safety
+        private static readonly object _lock = new object(); 
 
         private SessionService(IHttpContextAccessor httpContextAccessor)
         {
@@ -52,8 +54,11 @@ namespace ASPDotNetCrud.Services
             _httpContextAccessor.HttpContext.Session.Remove(keyString);
         }
 
+        // this method will get the values from the json and make a new User from it
+        // if the data isnt correct it will return null
         public User GetUserFromSession(SessionKeys key)
         {
+            //whitelist
             if (!key.HasFlag(SessionKeys.userSession))
             {
                 return null;

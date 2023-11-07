@@ -20,7 +20,7 @@ namespace ASPDotNetCrud.Controllers
             return View("~/Views/Account/register.cshtml");
         }
 
-
+        // if the name isnt taken make a new user and login as the new user
         public IActionResult MakeUser(string _name, string _password)
         {
             string p = EncryptionUtility.Encrypt(_password);
