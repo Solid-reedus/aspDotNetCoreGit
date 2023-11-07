@@ -6,11 +6,11 @@ using static ASPDotNetCrud.Services.SessionService;
 
 namespace ASPDotNetCrud.Controllers
 {
-    public class registerController : Controller
+    public class RegisterController : Controller
     {
         private readonly SessionService sessionService;
 
-        public registerController(SessionService _sessionService)
+        public RegisterController(SessionService _sessionService)
         {
             sessionService = _sessionService;
         }

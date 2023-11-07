@@ -6,11 +6,11 @@ using static ASPDotNetCrud.Services.SessionService;
 
 namespace ASPDotNetCrud.Controllers
 {
-    public class communityController : Controller
+    public class CommunityController : Controller
     {
         private readonly SessionService sessionService;
 
-        public communityController(SessionService _sessionService)
+        public CommunityController(SessionService _sessionService)
         {
             sessionService = _sessionService;
         }
@@ -20,8 +20,36 @@ namespace ASPDotNetCrud.Controllers
             return MysqlUtility.GetCommunities();
         }
 
+        [HttpGet]
+        [Route("community")]
         public IActionResult Community()
         {
+            List<Community> communities = GetCommunities();
+            ViewData["communities"] = communities;
+
+            uint? communityId = HttpRequestUtility.GETrequest<uint>("pageId", HttpContext);
+
+            if (communityId != null)
+            {
+                List<Post>? posts = MysqlUtility.GetCommunityPosts(communityId.Value);
+
+                ViewData["posts"] = posts;
+                ViewData["communityId"] = communityId;
+            }
+
+            User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
+            if (user != null)
+            {
+                ViewData["userId"] = user.id;
+            }
+
+            return View("~/Views/Post/community.cshtml");
+        }
+
+        public IActionResult DeletePost(uint posId)
+        {
+            MysqlUtility.DeletePost(posId);
+
             List<Community> communities = GetCommunities();
             ViewData["communities"] = communities;
 

@@ -1056,6 +1056,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\1a2b46a4-c8b9-4ff3-8b05-c413c69e3e1e_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\1bdf73a4-1157-4dc0-bad1-9942c07aa05a_crop.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/1bdf73a4-1157-4dc0-bad1-9942c07aa05a_crop.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\1bdf73a4-1157-4dc0-bad1-9942c07aa05a_crop.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\21f02a5b-8aed-4c55-93fd-de40acbc4c62_7pjf6a5vdrk51.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/21f02a5b-8aed-4c55-93fd-de40acbc4c62_7pjf6a5vdrk51.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\21f02a5b-8aed-4c55-93fd-de40acbc4c62_7pjf6a5vdrk51.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png))">
       <SourceType>Package</SourceType>
       <SourceId>ASPDotNetCrud</SourceId>
@@ -1071,6 +1103,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\260bea3a-b3ff-4b48-b064-b8ddc9df502a_glasses_fill.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\274f13b2-b5c3-4252-939f-815bb3fc3fe5_67a5851268e95c0.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/274f13b2-b5c3-4252-939f-815bb3fc3fe5_67a5851268e95c0.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\274f13b2-b5c3-4252-939f-815bb3fc3fe5_67a5851268e95c0.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg))">
       <SourceType>Package</SourceType>
@@ -1088,6 +1136,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2978bf4b-0f43-4522-97f9-864c258f9475_artworks-000058822967-v3vkhw-t500x500.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2a658988-7c7f-4033-be21-638cbce367ac_60879.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/2a658988-7c7f-4033-be21-638cbce367ac_60879.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2a658988-7c7f-4033-be21-638cbce367ac_60879.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png))">
       <SourceType>Package</SourceType>
       <SourceId>ASPDotNetCrud</SourceId>
@@ -1103,6 +1167,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\2bbe3a81-af78-4936-966e-b099c14cd3dd_67a5851268e95c0.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\3b34e692-2b32-4266-ba07-1bd2ab437a1a_c31.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/3b34e692-2b32-4266-ba07-1bd2ab437a1a_c31.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\3b34e692-2b32-4266-ba07-1bd2ab437a1a_c31.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg))">
       <SourceType>Package</SourceType>
@@ -1120,6 +1200,54 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\4f29fab9-4f79-413d-8f3b-99dfb0d86b25_artworks-000058822967-v3vkhw-t500x500.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\6e318477-1b6d-4100-abe3-681b2d752466_average_enjoyer.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/6e318477-1b6d-4100-abe3-681b2d752466_average_enjoyer.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\6e318477-1b6d-4100-abe3-681b2d752466_average_enjoyer.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\6eca6b46-5aed-42c3-acfa-16a3480fe90c_3qjfdm.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/6eca6b46-5aed-42c3-acfa-16a3480fe90c_3qjfdm.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\6eca6b46-5aed-42c3-acfa-16a3480fe90c_3qjfdm.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\7362d3e5-2bcd-4436-adf6-e835bd028918_2f3afhonjd5a1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/7362d3e5-2bcd-4436-adf6-e835bd028918_2f3afhonjd5a1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\7362d3e5-2bcd-4436-adf6-e835bd028918_2f3afhonjd5a1.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ASPDotNetCrud</SourceId>
@@ -1135,6 +1263,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\74254596-ab70-4016-9589-7889795b6ec6_Dd5n6-vVMAANmxZ.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\7e3e3547-d679-4ca9-9f2b-0466f3e80ba9_aspDotNetLogo.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/7e3e3547-d679-4ca9-9f2b-0466f3e80ba9_aspDotNetLogo.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\7e3e3547-d679-4ca9-9f2b-0466f3e80ba9_aspDotNetLogo.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\8aa5c32f-40b4-41a4-af3f-a7ea0e913deb_48afe0e9-5093-4968-85ba-ebb00d49876f-1.png))">
       <SourceType>Package</SourceType>
@@ -1184,6 +1328,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\a22b9ea3-6f2b-4589-ad48-d2b1fc8cf529_5bb0464641cbe.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\a715019e-871b-425f-817d-eed979dbb49f_20220628_105448.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/a715019e-871b-425f-817d-eed979dbb49f_20220628_105448.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\a715019e-871b-425f-817d-eed979dbb49f_20220628_105448.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\a7155858-5c0d-4ab2-b2f8-177e5a4e41f6_Dante_4.PNG))">
       <SourceType>Package</SourceType>
       <SourceId>ASPDotNetCrud</SourceId>
@@ -1216,6 +1376,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\acd83924-9536-40b2-b8b0-bc9c0b24f62d_heavyRequim.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\aec3b1cc-c201-444c-bb61-16b66fc62daf_crop.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/aec3b1cc-c201-444c-bb61-16b66fc62daf_crop.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\aec3b1cc-c201-444c-bb61-16b66fc62daf_crop.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\ba6b0e98-9538-46b0-b158-454ad207a75b_crop.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/ba6b0e98-9538-46b0-b158-454ad207a75b_crop.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\ba6b0e98-9538-46b0-b158-454ad207a75b_crop.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ASPDotNetCrud</SourceId>
@@ -1231,6 +1423,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\bee44853-073f-458d-b946-e1b547c31e36_Cursed+big+bossvenom+snake_6a41c8_7353789.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\c617062e-80cb-4aa1-92e6-d46b06ee783c_discord__f_003190__1602660370148.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/c617062e-80cb-4aa1-92e6-d46b06ee783c_discord__f_003190__1602660370148.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\c617062e-80cb-4aa1-92e6-d46b06ee783c_discord__f_003190__1602660370148.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\eb84a4c7-8ee1-4b18-bf55-ad2658a2985a_crop.jpg))">
       <SourceType>Package</SourceType>
@@ -1279,6 +1487,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\f921157d-5d46-4364-9d08-e34cee48bff7_discord__f_003190__1602660370148.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\fd95a5c2-eeac-4d59-aaeb-435285e58f09_5bb0464641cbe.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ASPDotNetCrud</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ASPDotNetCrud</BasePath>
+      <RelativePath>uploadImages/fd95a5c2-eeac-4d59-aaeb-435285e58f09_5bb0464641cbe.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploadImages\fd95a5c2-eeac-4d59-aaeb-435285e58f09_5bb0464641cbe.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

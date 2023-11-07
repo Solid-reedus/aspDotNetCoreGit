@@ -79,7 +79,6 @@ namespace ASPDotNetCrud.Utility
             {
                 conn.Open();
 
-                //SELECT user_name FROM `users` WHERE user_name = "jeff";
                 string request = "SELECT user_name FROM `users` WHERE user_name = \" " + _name + " \" ";
                 MySqlCommand cmd = new MySqlCommand(request, conn);
 
@@ -143,6 +142,21 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
+        public static void DeletePost(uint posId)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                //DELETE FROM posts WHERE post_id = 1
+                string request = "DELETE FROM posts WHERE post_id = @posId";
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                cmd.Parameters.AddWithValue("@posId", posId);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
         public static bool UserExists(string _name, string _password)
         {
@@ -161,6 +175,26 @@ namespace ASPDotNetCrud.Utility
             }
         }
 
+        public static bool MakeCommunity(string name, string description, uint owner)
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string request = "INSERT INTO communities(community_name, community_description, community_owner) " +
+                                 "VALUES (@communityName,@communityDescription,@owner)";
+                MySqlCommand cmd = new MySqlCommand(request, conn);
+
+                cmd.Parameters.AddWithValue("@communityName", name);
+                cmd.Parameters.AddWithValue("@communityDescription", description);
+                cmd.Parameters.AddWithValue("@owner", owner);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
+
+
 
         public static bool InsertUser(string name, string password, string? profilePicture = null)
         {
@@ -171,8 +205,6 @@ namespace ASPDotNetCrud.Utility
                                  "VALUES (@name, @password)";
                 MySqlCommand cmd = new MySqlCommand(request, conn);
 
-                // You should hash the password before storing it for security reasons.
-                // Here, we assume that the password is already hashed.
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@password", password);
 

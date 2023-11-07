@@ -8,12 +8,12 @@ using ASPDotNetCrud.Services;
 
 namespace ASPDotNetCrud.Controllers
 {
-    public class userControllers : Controller
+    public class UserControllers : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly SessionService sessionService;
 
-        public userControllers(IWebHostEnvironment webHostEnvironment, SessionService _sessionService)
+        public UserControllers(IWebHostEnvironment webHostEnvironment, SessionService _sessionService)
         {
             sessionService = _sessionService;
             _webHostEnvironment = webHostEnvironment;

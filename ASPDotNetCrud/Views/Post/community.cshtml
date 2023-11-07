@@ -38,8 +38,15 @@
 
     <div class="row">
         <div class="col">
-            <h1 class="display-4">@ViewData["communityTitle"]</h1>
+            <h1 class="display-6">@ViewData["communityTitle"]</h1>
         </div>
+
+        @if (ViewData["userId"] != null)
+        {
+            <div class="col-sm-3 m-auto">
+                <a class="btn bg-orange t-color-white" href="@Url.Action("NewCommunity", "NewCommunity")">make a new community</a>
+            </div>
+        }
     </div>
 
 
@@ -51,7 +58,7 @@
 
             @if (communityId != null && ViewData["userId"] != null)
             {
-                <a class="btn bg-orange t-color-white  mt-3" href="@Url.Action("MakePost", "makePost")?pageId=@communityId">make a post on @ViewData["communityname"]</a>
+                <a class="btn bg-orange t-color-white  mt-3" href="@Url.Action("MakePost", "MakePost")?pageId=@communityId">make a post on @ViewData["communityname"]</a>
             }
 
             <script>
@@ -113,8 +120,6 @@
                                 <div class="col-md-10 text-start">
                                     <h1 class="pl-5 post-title ">@post.title</h1>
                                 </div>
-                       
-
                             </div>
 
                             @if (post.subTitle != null && post.subTitle != "")
@@ -139,7 +144,10 @@
                         @if (post?.postUser == (uint?)ViewData["userId"])
                         {
                             <div class="col-md-2 mb-auto mt-3">
-                                <a class="btn bg-danger " href="@Url.Action("MakePost", "makePost")?pageId=@communityId">delete post</a>
+                                <form asp-controller="community" asp-action="DeletePost" method="post">
+                                    <input type="hidden" name="posId" value="@post?.id">
+                                    <button class="btn bg-danger" type="submit">Delete Post</button>
+                                </form>
                             </div>
                         }
 
@@ -148,11 +156,7 @@
             }
         }
 
-
-
     </div>
-
-
 </div>
 
 

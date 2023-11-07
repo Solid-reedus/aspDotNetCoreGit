@@ -9,12 +9,12 @@ using static ASPDotNetCrud.Utility.MysqlUtility;
 
 namespace ASPDotNetCrud.Controllers
 {
-    public class makePostController : Controller
+    public class MakePostController : Controller
     {
         private readonly SessionService sessionService;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public makePostController(SessionService _sessionService, IWebHostEnvironment webHostEnvironment)
+        public MakePostController(SessionService _sessionService, IWebHostEnvironment webHostEnvironment)
         {
             sessionService = _sessionService;
             _webHostEnvironment = webHostEnvironment;
@@ -25,28 +25,25 @@ namespace ASPDotNetCrud.Controllers
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
             uint? communityId = HttpRequestUtility.GETrequest<uint>("pageId", HttpContext);
 
-
-            //uint? communityId = HttpRequestUtility.GETrequest<uint>("pageId", HttpContext);
-            string pageRoute = "~/Views/Post/makePost.cshtml";
-
             if (communityId != null)
             {
                 TempData["communityId"] = communityId.ToString();
-                //pageRoute += $"?pageId={communityId}";
             }
             else
             {
                 ViewData["alert"] = "unable to find id of community";
-                return View("~/Views/Post/community.cshtml");
+
+                return RedirectToAction(actionName: "community", controllerName: "communityController");
+                
             }
 
             if (user == null) 
             {
                 ViewData["alert"] = "unable to find user sesssion";
-                return View("~/Views/Post/community.cshtml");
+                return RedirectToAction(actionName: "community", controllerName: "communityController");
             }
 
-            return View(pageRoute);
+            return View("~/Views/Post/makePost.cshtml");
         }
 
         public IActionResult MakeNewPost(string title, string? subtitle, IFormFile imageFile)
@@ -54,7 +51,7 @@ namespace ASPDotNetCrud.Controllers
             User? user = sessionService.GetUserFromSession(SessionKeys.userSession);
             uint? communityId = null;
 
-            if (uint.TryParse(TempData["communityId"].ToString(), out uint val))
+            if (uint.TryParse(TempData["communityId"]?.ToString(), out uint val))
             {
                 communityId = (uint?)val;
             }
@@ -69,11 +66,9 @@ namespace ASPDotNetCrud.Controllers
                 {
                     ViewData["alert"] = "unable to find community id";
                 }
-
-                return View("~/Views/Post/community.cshtml");
+                return RedirectToAction("Community", "community");
             }
 
-            //make new image
             string? uniqueFileName = null;
 
             if (imageFile != null && imageFile.Length > 0)
@@ -90,7 +85,7 @@ namespace ASPDotNetCrud.Controllers
 
             MysqlUtility.MakeNewPost(title, subtitle, uniqueFileName, user.id, (uint)communityId);
 
-            return View("~/Views/Post/community.cshtml");
+            return RedirectToAction("Community", "community");
 
         }
 
